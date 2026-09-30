@@ -3,7 +3,9 @@ name = "jetbot-hardware-test"
 version = "0.1.0"
 description = "One-command motor test and private camera preview for JetBot"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "asyncssh>=2.24,<3",
+]
 
 [tool.uv]
 package = false

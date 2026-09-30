@@ -4,9 +4,9 @@ Run the motor sequence once, then open a live CSI camera preview in your browser
 
 ## Requirements
 
-- [uv](https://docs.astral.sh/uv/) and OpenSSH (`ssh`) on your computer (macOS or Windows).
+- [uv](https://docs.astral.sh/uv/) on your computer (macOS or Windows).
 - The course JetBot image with SSH and a running `jetbot_jupyter` container.
-- The JetBot IP address and its SSH/sudo credentials. Passwords are prompted, never stored.
+- The JetBot IP address. The launcher uses `jetbot` for both SSH and sudo and automatically trusts the SSH host key.
 - Lift the wheels or place the robot in a clear, safe area before running the motor sequence.
 
 ## Run
@@ -20,6 +20,8 @@ uv run python jetbot_test.py 192.168.0.162
 ```
 
 Replace the IP with your JetBot's current address. The command sends forward, left, and right motor commands for one second each at speed `0.2`, stopping between commands and at the end. It then checks CSI 0 and CSI 1 and opens the live preview in your default browser. The terminal shows each result. Press **Ctrl+C** when finished.
+
+The default `jetbot/jetbot` credentials are included in this public repository. Use this only with JetBots you intend to access and keep the robot on a trusted network.
 
 Optional controls:
 
