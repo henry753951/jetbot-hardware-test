@@ -1,0 +1,9 @@
+[project]
+name = "jetbot-hardware-test"
+version = "0.1.0"
+description = "One-command motor test and private camera preview for JetBot"
+requires-python = ">=3.12"
+dependencies = []
+
+[tool.uv]
+package = false
